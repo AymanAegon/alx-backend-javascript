@@ -35,7 +35,7 @@ function countStudents(path) {
           msg += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
         }
       }
-      resolve(msg);
+      resolve(msg.slice(0, -1));
     });
   });
 }
