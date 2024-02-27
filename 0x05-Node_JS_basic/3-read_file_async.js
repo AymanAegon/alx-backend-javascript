@@ -14,25 +14,24 @@ function countStudents(path) {
       const fields = {};
       lines.forEach((line) => {
         if (line !== '') {
-        studentsNumber += 1;
-        const celles = line.split(',');
-        if (fields[celles[3]]) {
+          studentsNumber += 1;
+          const celles = line.split(',');
+          if (fields[celles[3]]) {
             fields[celles[3]].push(celles[0]);
-        } else {
+          } else {
             fields[celles[3]] = [celles[0]];
-        }
+          }
         }
       });
       console.log(`Number of students: ${studentsNumber}`);
       for (const field in fields) {
         if (Object.hasOwnProperty.call(fields, field)) {
-        console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
+          console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
         }
       }
       resolve();
     });
   });
-  
 }
 
 module.exports = countStudents;
