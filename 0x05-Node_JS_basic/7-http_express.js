@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  let responseText = 'This is the list of our students';
+  let responseText = 'This is the list of our students\n';
   countStudents(dbFile)
     .then((msg) => {
       responseText += msg;
