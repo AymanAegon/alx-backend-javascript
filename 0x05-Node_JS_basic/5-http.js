@@ -32,7 +32,7 @@ function countStudents(path) {
       let msg = `Number of students: ${studentsNumber}\n`;
       for (const field in fields) {
         if (Object.hasOwnProperty.call(fields, field)) {
-            msg += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
+          msg += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
         }
       }
       resolve(msg);
@@ -42,7 +42,7 @@ function countStudents(path) {
 
 const app = http.createServer((req, res) => {
   const path = req.url;
-  var responseText = '';
+  let responseText = '';
 
   if (path === '/') {
     responseText = 'Hello Holberton School!';
