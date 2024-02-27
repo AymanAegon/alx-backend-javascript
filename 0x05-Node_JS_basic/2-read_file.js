@@ -22,7 +22,7 @@ function countStudents(path) {
         }
       }
     });
-    console.log(`Number of students: ${studentsNumber}\n`);
+    console.log(`Number of students: ${studentsNumber}`);
     for (const field in fields) {
       if (Object.hasOwnProperty.call(fields, field)) {
         console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
