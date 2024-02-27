@@ -62,6 +62,7 @@ const app = http.createServer((req, res) => {
         res.end(responseText);
       })
       .catch((error) => {
+        console.log(error);
         res.end(responseText.slice(0, -1));
       });
   }
