@@ -1,4 +1,5 @@
 const readDatabase = require('../utils');
+
 const dbFile = process.argv.length > 2 ? process.argv[2] : '';
 
 class StudentsController {

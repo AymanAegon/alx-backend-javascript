@@ -10,11 +10,9 @@ function readDatabase(path) {
       const lines = data.split('\n');
       lines.shift();
 
-      let studentsNumber = 0;
       const fields = {};
       lines.forEach((line) => {
         if (line !== '') {
-          studentsNumber += 1;
           const celles = line.split(',');
           if (fields[celles[3]]) {
             fields[celles[3]].push(celles[0]);
