@@ -10,5 +10,7 @@ describe('sendPaymentRequestToApi', () => {
     fun(100, 20);
     original('SUM', 100, 20);
     expect(fun.calledWith(100, 20)).to.equal(original.calledWith('SUM', 100, 20));
+    fun.restore();
+    original.restore();
   });
 });
